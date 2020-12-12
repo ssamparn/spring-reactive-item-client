@@ -35,8 +35,7 @@ public class ItemClientController {
 
         Flux<Item> itemFlux = webClient.get()
                 .uri("/items")
-                .exchange()
-                .flatMapMany(clientResponse -> clientResponse.bodyToFlux(Item.class));
+                .exchangeToFlux(clientResponse -> clientResponse.bodyToFlux(Item.class));
 
         return itemFlux;
 
@@ -56,8 +55,7 @@ public class ItemClientController {
         String id = "ExistingId";
         return webClient.get()
                 .uri("/items/{id}", id)
-                .exchange()
-                .flatMap(clientResponse -> clientResponse.bodyToMono(Item.class));
+                .exchangeToMono(clientResponse -> clientResponse.bodyToMono(Item.class));
     }
 
     @PostMapping("/create/item")
