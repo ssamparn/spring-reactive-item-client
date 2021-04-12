@@ -5,13 +5,15 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.4.0</version>
+		<version>2.4.4</version>
 		<relativePath/>
 	</parent>
 	<groupId>com.reactivespring</groupId>
 	<artifactId>reactive-item-client</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>reactive-item-client</name>
+
+	<name>Spring Reactive Item Client</name>
+
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
